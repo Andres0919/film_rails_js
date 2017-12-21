@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  address: MyString
+  status: MyString
+  phone: MyString
+  price_2D_movie: 1
+  price_3D_movie: 1
+  price_regular_chair: 1
+  price_premium_chair: 1
+
+two:
+  name: MyString
+  address: MyString
+  status: MyString
+  phone: MyString
+  price_2D_movie: 1
+  price_3D_movie: 1
+  price_regular_chair: 1
+  price_premium_chair: 1

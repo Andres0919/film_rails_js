@@ -1,0 +1,57 @@
+<%= form_with(model: cinema, local: true) do |form| %>
+  <% if cinema.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(cinema.errors.count, "error") %> prohibited this cinema from being saved:</h2>
+
+      <ul>
+      <% cinema.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :cinema_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address %>
+    <%= form.text_field :address, id: :cinema_address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :status %>
+    <%= form.text_field :status, id: :cinema_status %>
+  </div>
+
+  <div class="field">
+    <%= form.label :phone %>
+    <%= form.text_field :phone, id: :cinema_phone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price_2D_movie %>
+    <%= form.number_field :price_2D_movie, id: :cinema_price_2D_movie %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price_3D_movie %>
+    <%= form.number_field :price_3D_movie, id: :cinema_price_3D_movie %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price_regular_chair %>
+    <%= form.number_field :price_regular_chair, id: :cinema_price_regular_chair %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price_premium_chair %>
+    <%= form.number_field :price_premium_chair, id: :cinema_price_premium_chair %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

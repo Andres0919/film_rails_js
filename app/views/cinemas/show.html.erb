@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @cinema.name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @cinema.address %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @cinema.status %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @cinema.phone %>
+</p>
+
+<p>
+  <strong>Price 2d movie:</strong>
+  <%= @cinema.price_2D_movie %>
+</p>
+
+<p>
+  <strong>Price 3d movie:</strong>
+  <%= @cinema.price_3D_movie %>
+</p>
+
+<p>
+  <strong>Price regular chair:</strong>
+  <%= @cinema.price_regular_chair %>
+</p>
+
+<p>
+  <strong>Price premium chair:</strong>
+  <%= @cinema.price_premium_chair %>
+</p>
+
+<%= link_to 'Edit', edit_cinema_path(@cinema) %> |
+<%= link_to 'Back', cinemas_path %>

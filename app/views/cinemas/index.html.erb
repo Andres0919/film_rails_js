@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Cinemas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Status</th>
+      <th>Phone</th>
+      <th>Price 2d movie</th>
+      <th>Price 3d movie</th>
+      <th>Price regular chair</th>
+      <th>Price premium chair</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cinemas.each do |cinema| %>
+      <tr>
+        <td><%= cinema.name %></td>
+        <td><%= cinema.address %></td>
+        <td><%= cinema.status %></td>
+        <td><%= cinema.phone %></td>
+        <td><%= cinema.price_2D_movie %></td>
+        <td><%= cinema.price_3D_movie %></td>
+        <td><%= cinema.price_regular_chair %></td>
+        <td><%= cinema.price_premium_chair %></td>
+        <td><%= link_to 'Show', cinema %></td>
+        <td><%= link_to 'Edit', edit_cinema_path(cinema) %></td>
+        <td><%= link_to 'Destroy', cinema, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cinema', new_cinema_path %>
