@@ -1,0 +1,26 @@
+<h1>Home#index</h1>
+<p>Find me in app/views/home/index.html.erb</p>
+<div class="row">
+  <div class="col-lg-3 col-md-2 col-sm-1 col-xs-0"></div>
+  <div class="col-lg-6 col-md-8 col-sm-10 col-xs-12">
+    <table class="table table-bordered">
+    <% @index.each do |cinema|%>
+      <tr>
+        <td><%= cinema.name %></td>
+        <td><%= cinema.address %></td>
+        <td><%= cinema.status %></td>
+        <td><%= cinema.phone %></td>
+        <td><%= cinema.price_2D_movie %></td>
+        <td><%= cinema.price_3D_movie %></td>
+        <td><%= cinema.price_regular_chair %></td>
+        <td><%= cinema.price_premium_chair %></td>
+        <td><%= link_to 'Show', cinema %></td>
+        <td><%= link_to 'Edit', edit_cinema_path(cinema) %></td>
+        <td><%= link_to 'Destroy', cinema, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+    </table>
+  </div>
+  <div class="col-lg-3 col-md-2 col-sm-1 col-xs-0"></div>
+</div>
+<%= link_to 'Cinemas', cinemas_path %>
