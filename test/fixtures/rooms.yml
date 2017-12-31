@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  num_chairs: 1
+  status: MyString
+  cinema: one
+
+two:
+  name: MyString
+  num_chairs: 1
+  status: MyString
+  cinema: two

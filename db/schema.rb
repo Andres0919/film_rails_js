@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171221165514) do
+ActiveRecord::Schema.define(version: 20171231020128) do
+
+  create_table "chairs", force: :cascade do |t|
+    t.string "row"
+    t.string "column"
+    t.string "status"
+    t.integer "room_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["room_id"], name: "index_chairs_on_room_id"
+  end
 
   create_table "cinemas", force: :cascade do |t|
     t.string "name"
@@ -23,6 +33,38 @@ ActiveRecord::Schema.define(version: 20171221165514) do
     t.integer "price_premium_chair"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "movies", force: :cascade do |t|
+    t.string "title"
+    t.text "abstract"
+    t.integer "duration"
+    t.date "date_start"
+    t.date "date_finish"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "rooms", force: :cascade do |t|
+    t.string "name"
+    t.integer "num_chairs"
+    t.string "status"
+    t.integer "cinema_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["cinema_id"], name: "index_rooms_on_cinema_id"
+  end
+
+  create_table "schedules", force: :cascade do |t|
+    t.datetime "schedule"
+    t.datetime "hour_finish"
+    t.string "status"
+    t.integer "movie_id"
+    t.integer "room_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["movie_id"], name: "index_schedules_on_movie_id"
+    t.index ["room_id"], name: "index_schedules_on_room_id"
   end
 
 end

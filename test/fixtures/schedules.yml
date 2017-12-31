@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  schedule: 2017-12-30 21:01:28
+  hour_finish: 2017-12-30 21:01:28
+  status: MyString
+  movie: one
+  room: one
+
+two:
+  schedule: 2017-12-30 21:01:28
+  hour_finish: 2017-12-30 21:01:28
+  status: MyString
+  movie: two
+  room: two
