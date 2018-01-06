@@ -1,0 +1,32 @@
+<%= form_with(model: room, local: true) do |form| %>
+  <% if room.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(room.errors.count, "error") %> prohibited this cinema from being saved:</h2>
+      <%= @cinema_id %>
+      <ul>
+        <% room.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :room_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :num_chairs %>
+    <%= form.text_field :num_chairs, id: :room_num_chairs %>
+  </div>
+
+  <div class="field">
+    <%= form.label :status %>
+    <%= form.text_field :status, id: :room_status %>
+  </div>
+  <%= hidden_field_tag('cinema_id', @cinema.id) %>
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
