@@ -10,6 +10,7 @@ class CinemasController < ApplicationController
   # GET /cinemas/1
   # GET /cinemas/1.json
   def show
+    @room = Room.new
   end
 
   # GET /cinemas/new
